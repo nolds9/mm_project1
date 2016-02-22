@@ -1,14 +1,22 @@
-.board{
+.board {
   outline: 1px solid red;
   height: auto;
 }
 
-.card{
+.card {
   width: 150px;
   height: 200px;
   outline: 1px solid blue;
+  color: black;
 }
 
-.back{
+.back {
   background-color: green;
+  color: green;
+}
+
+.face {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50%;
 }
