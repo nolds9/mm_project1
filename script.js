@@ -4,25 +4,30 @@
 //make a deck of cards (can be numbered 1-n for now)
 // display all cards
 
-var card = document.createElement('div');
-var face = document.createElement('p');
-var value = document.createTextNode('1');
+var game = {
+  board: document.querySelector('.board'),
+  card: document.createElement('div'),
+  face: document.createElement('p'),
+  value: document.createTextNode('1'),
 
-face.appendChild(value); // assigns a value to the face
-face.classList.add('face'); // provides style to the face of the card
+  createCard: function() {
+    this.face.appendChild(this.value); // assigns a value to the face
+    this.face.classList.add('face'); // provides style to the face of the card
 
-card.classList.add('card'); // creates card
+    this.card.classList.add('card'); // creates card
 
-card.appendChild(face);
+    this.card.appendChild(this.face);
 
-card.classList.add('back'); // hides face value of card
+    this.card.classList.add('back'); // hides face value of card
 
-var board = document.querySelector('.board');
+    this.board.appendChild(this.card);
 
-board.appendChild(card);
+    this.card.addEventListener('click', this.flipCard);
+  },
 
-card.addEventListener('click', flipCard);
+  flipCard: function() {
+    this.classList.toggle('back');
+  }
+};
 
-function flipCard() {
-  card.classList.toggle('back');
-}
+game.createCard();

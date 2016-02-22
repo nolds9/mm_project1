@@ -6,13 +6,13 @@
 .card {
   width: 150px;
   height: 200px;
-  outline: 1px solid blue;
+  outline: 2px solid black;
   color: black;
 }
 
 .back {
   background-color: green;
-  color: green;
+  color: transparent;
 }
 
 .face {

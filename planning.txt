@@ -13,8 +13,9 @@ Bronze:
 
 Silver:
 - Track pairs of cards when they are flipped
-- Fix bug where you can see value of card by highlighting it
++ Fix bug where you can see value of card by highlighting it
 
 Gold:
 - Add images to cards
 - Have different decks
+- Add scoring
