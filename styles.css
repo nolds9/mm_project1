@@ -8,6 +8,7 @@
   height: 200px;
   outline: 2px solid black;
   color: black;
+  float:left;
 }
 
 .back {
@@ -18,5 +19,5 @@
 .face {
   text-align: center;
   font-size: 50px;
-  padding-top: 50%;
+  padding-top: 15%;
 }
