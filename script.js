@@ -24,5 +24,5 @@ board.appendChild(card);
 card.addEventListener('click', flipCard);
 
 function flipCard() {
-  console.log("you clicked the card!");
+  card.classList.toggle('back');
 }
