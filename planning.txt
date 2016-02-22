@@ -1,0 +1,19 @@
+User Stories:
+1. As a user, I should be able to flip a card
+2. As a user, I should be able to win/lose the game
+3. As a card, I should be able to flip over
+4. As a memory game, I should have sets of matching cards
+5. As a user, I should be able to match sets of cards
+
+
+Bronze:
+- Display back of cards
+- Display front of cards
+- Flip cards
+
+Silver:
+- Track pairs of cards when they are flipped
+
+Gold:
+- Add images to cards
+- Have different decks

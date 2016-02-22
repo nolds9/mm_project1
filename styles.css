@@ -1,0 +1,14 @@
+.board{
+  outline: 1px solid red;
+  height: auto;
+}
+
+.card{
+  width: 150px;
+  height: 200px;
+  outline: 1px solid blue;
+}
+
+.back{
+  background-color: green;
+}
