@@ -3,6 +3,15 @@
 // flip that card back and forth
 //make a deck of cards (can be numbered 1-n for now)
 // display all cards
+// check if number is visible
+  // if not ?
+  // if yes, is this the first number?
+    // if yes, get a second number
+    // if no, compare numbers
+
+    // do numbers match?
+      // if yes, disable clicking on them
+      // if no, flip back over
 
 var game = {
   board: document.querySelector('.board'),
@@ -61,43 +70,36 @@ var game = {
   },
 
   playGame: function(position) {
-    var currentCard = document.getElementsByClassName('card');
-    var value = currentCard[position].textContent;
-    console.log(value);
+    var allCards = document.getElementsByClassName('card');
+    var currentCard = allCards[position];
+    var isBack = currentCard.classList.contains('back');
 
-
-    // if(!isBack && this.card1 === null) {
-    //   this.card1 = number;
-    // }
-    // else if(!isBack && this.card2 === null) {
-    //   this.card2 = number;
-    //   this.matchNumbers();
-    // }
-    // else {
-    //   console.log('play game else path');
-    // }
-
-    // check if number is visible
-      // if not ?
-      // if yes, is this the first number?
-        // if yes, get a second number
-        // if no, compare numbers
-
-        // do numbers match?
-          // if yes, disable clicking on them
-          // if no, flip back over
+    if(!isBack && this.card1 === null) {
+      this.card1 = currentCard;
+    }
+    else if(!isBack && this.card2 === null) {
+      this.card2 = currentCard;
+      var self = this;
+      setTimeout(self.matchNumbers, 500);
+    }
+    else {
+      console.log('play game else path');
+    }
   },
 
   matchNumbers: function() {
-    if(this.card1 == this.card2){
-      console.log('hooray');
-
+    var value1 = game.card1.textContent;
+    var value2 = game.card2.textContent;
+    if(value1 == value2){
+      game.card1.removeEventListener('click', game.flipCard);
+      game.card2.removeEventListener('click', game.flipCard);
     }
     else {
-      console.log("booo!");
+      game.card1.classList.toggle('back');
+      game.card2.classList.toggle('back');
     }
-    this.card1 = null;
-    this.card2 = null;
+    game.card1 = null;
+    game.card2 = null;
   }
 };
 

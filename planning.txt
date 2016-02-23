@@ -7,12 +7,15 @@ User Stories:
 
 
 Bronze:
-- Display back of cards
-- Display front of cards
-- Flip cards
++ Display back of cards
++ Display front of cards
++ Flip cards
 
 Silver:
-- Track pairs of cards when they are flipped
++ Track pairs of cards when they are flipped
++ Freeze matching pairs
++ Flip non-matches back over
+- Add a nice background to cards
 + Fix bug where you can see value of card by highlighting it
 
 Gold:
