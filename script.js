@@ -35,7 +35,7 @@ var game = {
   },
 
   buildDeck: function() {
-    for(var i = 0; i < 8; i++) {
+    for(var i = 0; i < 9; i++) {
       this.deck.push(i);
       this.deck.push(i);
     }
