@@ -21,7 +21,6 @@ Only after the entire deck was in place did I begin to add the game rules. There
 * Identifying which cards were clicked
 * Remembering the values of the active clicked cards
 * Preventing the user from clicking matched cards
----
 
 ### User Stories
 
@@ -31,14 +30,12 @@ Only after the entire deck was in place did I begin to add the game rules. There
 * As a user, I should be able to match sets of cards
 * As a card, I should be able to flip over no matter which side I am on
 * As a card, I should be unique aside from my matching card
----
 
 ### Unsolved Problems
 
 * When user clicks on multiple cards really fast, they get false matches
 * Website does not look very pretty or professional
 * The matchNumbers method loses its proper context when passed through setTimeout
----
 
 ### Bronze, Silver, and Gold Plans
 
@@ -60,7 +57,6 @@ Only after the entire deck was in place did I begin to add the game rules. There
 * Add scoring
 * Add a nice background to cards
 * Add a reset button
----
 
 ### Psuedocode
 
