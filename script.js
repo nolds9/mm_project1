@@ -44,10 +44,13 @@ var game = {
       for(var i = 0; i < this.deck.length; i++) {
         this.createCard(this.deck[i], i);
       }
+
+    var restart = document.querySelector('.restart');
+    restart.addEventListener('click', this.startNewGame);
   },
 
   buildDeck: function() {
-    for(var i = 0; i < 9; i++) {
+    for(var i = 0; i < 8; i++) {
       this.deck.push(i);
       this.deck.push(i);
     }
@@ -104,10 +107,9 @@ var game = {
   },
 
   checkForWin: function() {
-    //var flippedCards = document.getElementsByClassName('back');
-    flippedCards = 0; // REMOVE AFTER TESTING
+    var flippedCards = document.getElementsByClassName('back');
 
-    if(flippedCards <= 0) { //ADD .LENGTH BACK AFTER TESTING
+    if(flippedCards.length <= 0) {
       var header = document.querySelector('header');
       var winText = document.createTextNode("You win! YAY!");
       var winP = document.createElement('p');
@@ -117,11 +119,11 @@ var game = {
       winDiv.appendChild(winP);
       header.appendChild(winDiv);
     }
+  },
 
-
-
+  startNewGame: function() {
+    location.reload();
   }
 };
 
 game.createCards();
-game.checkForWin(); //REMOVE AFTER TESTING

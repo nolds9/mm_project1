@@ -1,3 +1,14 @@
+body {
+  font-family: 'Calligraffitti', cursive;
+  background-color: rgb(218, 232, 241);
+}
+
+header {
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+}
+
 .board {
   height: auto;
 }
@@ -5,9 +16,12 @@
 .card {
   width: 150px;
   height: 200px;
-  outline: 2px solid black;
+  border: 2px solid black;
   color: black;
   float:left;
+  border-radius: 5%;
+  margin: 5px;
+  background-color: white;
 }
 
 .back {
@@ -18,10 +32,17 @@
 .face {
   text-align: center;
   font-size: 50px;
-  padding-top: 15%;
+  padding-top: 15px;
+
 }
 
 .winner {
   text-align: center;
-  font-size: 25px;
+  font-size: 50px;
+}
+
+.restart {
+  margin: 50px;
+  width: 90px;
+  height: 40px;
 }
