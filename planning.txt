@@ -15,10 +15,11 @@ Silver:
 + Track pairs of cards when they are flipped
 + Freeze matching pairs
 + Flip non-matches back over
-- Add a nice background to cards
+- You win message
 + Fix bug where you can see value of card by highlighting it
 
 Gold:
 - Add images to cards
 - Have different decks
 - Add scoring
+- Add a nice background to cards

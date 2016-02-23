@@ -22,9 +22,9 @@ var game = {
 
   createCard: function(faceValue, index) {
     var value = document.createTextNode(faceValue);
-    card = document.createElement('div');
+    var card = document.createElement('div');
     card.setAttribute('data-deckPosition', index);
-    face = document.createElement('p');
+    var face = document.createElement('p');
     face.appendChild(value); // assigns a value to the face
     face.classList.add('face'); // provides style to the face of the card
     card.classList.add('card'); // creates card
@@ -47,7 +47,7 @@ var game = {
   },
 
   buildDeck: function() {
-    for(var i = 0; i < 10; i++) {
+    for(var i = 0; i < 9; i++) {
       this.deck.push(i);
       this.deck.push(i);
     }
@@ -83,7 +83,7 @@ var game = {
       setTimeout(self.matchNumbers, 500);
     }
     else {
-      console.log('play game else path');
+      console.log('Something weird happened');
     }
   },
 
@@ -93,6 +93,7 @@ var game = {
     if(value1 == value2){
       game.card1.removeEventListener('click', game.flipCard);
       game.card2.removeEventListener('click', game.flipCard);
+      game.checkForWin();
     }
     else {
       game.card1.classList.toggle('back');
@@ -100,7 +101,27 @@ var game = {
     }
     game.card1 = null;
     game.card2 = null;
+  },
+
+  checkForWin: function() {
+    //var flippedCards = document.getElementsByClassName('back');
+    flippedCards = 0; // REMOVE AFTER TESTING
+
+    if(flippedCards <= 0) { //ADD .LENGTH BACK AFTER TESTING
+      var header = document.querySelector('header');
+      var winText = document.createTextNode("You win! YAY!");
+      var winP = document.createElement('p');
+      var winDiv = document.createElement('div');
+      winP.classList.add('winner');
+      winP.appendChild(winText);
+      winDiv.appendChild(winP);
+      header.appendChild(winDiv);
+    }
+
+
+
   }
 };
 
 game.createCards();
+game.checkForWin(); //REMOVE AFTER TESTING
