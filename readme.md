@@ -54,6 +54,7 @@ Only after the entire deck was in place did I begin to add the game rules. There
 **Gold**
 * Add images to cards
 * Have different decks
+* Let user choose number of cards
 * Add scoring
 * Add a nice background to cards
 * Add a reset button

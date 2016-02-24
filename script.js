@@ -6,10 +6,12 @@ var game = {
 
 
   createCard: function(faceValue, index) {
+    // create the elements of a card
     var value = document.createTextNode(faceValue);
     var card = document.createElement('div');
-    card.setAttribute('data-deckPosition', index);
     var face = document.createElement('p');
+
+    card.setAttribute('data-deckPosition', index); // assigns an index to the card
     face.appendChild(value); // assigns a value to the face
     face.classList.add('face'); // provides style to the face of the card
     card.classList.add('card'); // creates card
@@ -30,6 +32,7 @@ var game = {
         this.createCard(this.deck[i], i);
       }
 
+    // creates button to control cards. note: move to own method during refactor
     var restart = document.querySelector('.restart');
     restart.addEventListener('click', this.startNewGame);
     restart.addEventListener('mouseover', function() {
@@ -68,6 +71,7 @@ var game = {
     var currentCard = allCards[position];
     var isBack = currentCard.classList.contains('back');
 
+    // checks if 1st or 2nd card has been flipped
     if(!isBack && this.card1 === null) {
       this.card1 = currentCard;
     }
@@ -77,6 +81,7 @@ var game = {
       setTimeout(self.matchNumbers, 500);
     }
     else {
+      // error control if single card is flipped twice
       this.card1 = null;
       this.card2 = null;
       currentCard.classList.add('back');
@@ -87,14 +92,17 @@ var game = {
     var value1 = game.card1.textContent;
     var value2 = game.card2.textContent;
     if(value1 == value2){
+      // if cards match, freeze clicking on those cards
       game.card1.removeEventListener('click', game.flipCard);
       game.card2.removeEventListener('click', game.flipCard);
       game.checkForWin();
     }
     else {
+      // otherwise flip the cards back over
       game.card1.classList.toggle('back');
       game.card2.classList.toggle('back');
     }
+    // and reset the cards I am using to compare values
     game.card1 = null;
     game.card2 = null;
   },
