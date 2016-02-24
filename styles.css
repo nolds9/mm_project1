@@ -1,13 +1,14 @@
 body {
   display: flex;
   font-family: 'Calligraffitti', cursive;
-  background-color: rgb(227, 255, 0);
+  background-color: black;
 }
 
 header {
   font-size: 50px;
   text-align: center;
   padding: 60px;
+  color: white;
 }
 
 .board {
@@ -17,7 +18,7 @@ header {
 .card {
   width: 150px;
   height: 200px;
-  border: 2px solid black;
+  border: 2px solid white;
   color: black;
   float:left;
   border-radius: 5%;
