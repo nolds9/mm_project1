@@ -77,8 +77,9 @@ var game = {
       setTimeout(self.matchNumbers, 500);
     }
     else {
-      alert("Slow down!");
-      this.startNewGame();
+      this.card1 = null;
+      this.card2 = null;
+      currentCard.classList.add('back');
     }
   },
 
