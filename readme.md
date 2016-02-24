@@ -57,20 +57,21 @@ Only after the entire deck was in place did I begin to add the game rules. There
 * Add scoring
 * Add a nice background to cards
 * Add a reset button
+* Fix bug where you break game when you double click card
+* Fix bug where you break game when you click too fast
 
 ### Psuedocode
 
-display 1 card (back)
-display 1 card front
-flip that card back and forth
-make a deck of cards (can be numbered 1-n for now)
-display all cards
-check if number is visible
-  if not ?
-  if yes, is this the first number?
-    if yes, get a second number
-    if no, compare numbers
-
-    do numbers match?
-      if yes, disable clicking on them
-      if no, flip back over
+* display 1 card (back)
+* display 1 card front
+* flip that card back and forth
+* make a deck of cards (can be numbered 1-n for now)
+* display all cards
+* check if number is visible
+  * if not ?
+  * if yes, is this the first number?
+    * if yes, get a second number
+    * if no, compare numbers
+      * do numbers match?
+        * if yes, disable clicking on them
+        * if no, flip back over
