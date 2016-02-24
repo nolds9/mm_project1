@@ -71,7 +71,8 @@ var game = {
       setTimeout(self.matchNumbers, 500);
     }
     else {
-      console.log('Something weird happened');
+      alert("Slow down!");
+      this.startNewGame();
     }
   },
 
