@@ -32,6 +32,12 @@ var game = {
 
     var restart = document.querySelector('.restart');
     restart.addEventListener('click', this.startNewGame);
+    restart.addEventListener('mouseover', function() {
+      this.classList.toggle('restartReverse');
+    });
+    restart.addEventListener('mouseout', function() {
+      this.classList.toggle('restartReverse');
+    });
   },
 
   buildDeck: function() {

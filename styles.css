@@ -57,5 +57,10 @@ header {
   background-color: black;
   color: white;
   font-size: 15px;
-  font-family: 'Calligraffitti', cursive;
+  font-family: 'Handlee', cursive;
+}
+
+.restartReverse {
+  background-color: white;
+  color: black;
 }
