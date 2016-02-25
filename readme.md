@@ -34,7 +34,6 @@ Only after the entire deck was in place did I begin to add the game rules. There
 ### Unsolved Problems
 
 * When user clicks on multiple cards really fast, they get false matches
-* Website does not look very pretty or professional
 * The matchNumbers method loses its proper context when passed through setTimeout
 
 ### Bronze, Silver, and Gold Plans
