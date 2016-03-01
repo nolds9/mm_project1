@@ -1,9 +1,9 @@
+// NHO: love the object-oriented approach!
 var game = {
   board: document.querySelector('.board'),
   deck: [],
   card1: null,
   card2: null,
-
 
   createCard: function(faceValue, index) {
     // create the elements of a card
@@ -22,7 +22,7 @@ var game = {
   },
 
   flipCard: function() {
-    this.classList.toggle('back');
+    this.classList.toggle('back'); // NHO: clever!
     game.playGame(this.getAttribute('data-deckPosition'));
   },
 
@@ -33,6 +33,7 @@ var game = {
       }
 
     // creates button to control cards. note: move to own method during refactor
+    // NHO: ^ took the words right out of my mouth, metaphorically speaking...
     var restart = document.querySelector('.restart');
     restart.addEventListener('click', this.startNewGame);
     restart.addEventListener('mouseover', function() {
@@ -44,6 +45,7 @@ var game = {
   },
 
   buildDeck: function() {
+    // NHO: why 9? what about the option to choose deck size based on user input?
     for(var i = 0; i < 9; i++) {
       this.deck.push(i);
       this.deck.push(i);
@@ -51,6 +53,7 @@ var game = {
     this.shuffleDeck();
   },
 
+  // NHO: while this method works, would recommend using a method that takes an array (deck) as an argument and returns a shuffled array as output
   shuffleDeck: function() {
     // Using the Fisher-Yates (Knuth) shuffle
     var currentIndex = this.deck.length;
@@ -77,8 +80,8 @@ var game = {
     }
     else if(!isBack && this.card2 === null) {
       this.card2 = currentCard;
-      var self = this;
-      setTimeout(self.matchNumbers, 500);
+      var self = this; // NHO: good work around for the change of context. setTimeout is just one of those methods that changes the nature of context.
+      setTimeout(self.matchNumbers, 300); // NHO: dropping the interval down a notch to 300 seemed to fix the errors for me.
     }
     else {
       // error control if single card is flipped twice
@@ -89,6 +92,7 @@ var game = {
   },
 
   matchNumbers: function() {
+    // NHO: The script errors on this line if you click repeatedly because of the asynch nature of the setTimeout on line 82
     var value1 = game.card1.textContent;
     var value2 = game.card2.textContent;
     if(value1 == value2){
@@ -123,8 +127,15 @@ var game = {
   },
 
   startNewGame: function() {
+    // NHO: can you think of another way to restart the game? Maybe by utilizing one of the methods you have already defined?
     location.reload();
   }
 };
 
 game.createCards();
+
+// NHO: Overall, very clean, well organized, solid code!
+// Some things to consider for the future:
+  // how could we apply what we learned about OOJS, with constructor functions and prototypes to help DRY up this code.
+ // what areas of our code could we break up into smaller chunks and more methods.
+// tests!

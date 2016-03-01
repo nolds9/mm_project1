@@ -1,3 +1,4 @@
+/* NHO: blown away by the styles and design, very nice! CSS Validates! */
 body {
   display: flex;
   font-family: 'Calligraffitti', cursive;
@@ -27,8 +28,10 @@ header {
 }
 
 .back {
+  /* NHO: reminder to remove unused/commented out code */
   /*background-color: green;*/
   background-image: url('pattern-background.jpg');
+  /* NHO: love the photo credit and the fact that you downloaded locally to avoid future 404 errors!!! */
   /*Image found at http://4vector.com/free-vector/beautiful-pattern-background-03-vector-15044*/
   background-size: contain;
   color: transparent;
@@ -64,3 +67,6 @@ header {
   background-color: white;
   color: black;
 }
+/* NHO: also great to see you incorporate flex-box and looks to be working very nicely with page responsiveness;
+  one thing to consider would be to think about what you want your grid dimensions to be at each appropriate screen width
+  */
